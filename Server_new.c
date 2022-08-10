@@ -158,7 +158,42 @@ beforeRead(UA_Server *server,
 	//now = gpioRead(31);
 	UA_Variant_setScalar(&value, &now, &UA_TYPES[UA_TYPES_INT64]);
 	UA_Server_writeValue(server, UA_NODEID_STRING(2, "GPIO 31"), value); 
-
+	
+	now = rand() % 2;
+	//now = gpioRead(32);
+	UA_Variant_setScalar(&value, &now, &UA_TYPES[UA_TYPES_INT64]);
+	UA_Server_writeValue(server, UA_NODEID_STRING(2, "GPIO 32"), value);
+	now = rand() % 2;
+	//now = gpioRead(33);
+	UA_Variant_setScalar(&value, &now, &UA_TYPES[UA_TYPES_INT64]);
+	UA_Server_writeValue(server, UA_NODEID_STRING(2, "GPIO 33"), value);
+	now = rand() % 2;
+	//now = gpioRead(34);
+	UA_Variant_setScalar(&value, &now, &UA_TYPES[UA_TYPES_INT64]);
+	UA_Server_writeValue(server, UA_NODEID_STRING(2, "GPIO 34"), value);
+	
+	now = rand() % 2;
+	//now = gpioRead(35);
+	UA_Variant_setScalar(&value, &now, &UA_TYPES[UA_TYPES_INT64]);
+	UA_Server_writeValue(server, UA_NODEID_STRING(2, "GPIO 35"), value); 
+	
+	now = rand() % 2;
+	//now = gpioRead(36);
+	UA_Variant_setScalar(&value, &now, &UA_TYPES[UA_TYPES_INT64]);
+	UA_Server_writeValue(server, UA_NODEID_STRING(2, "GPIO 36"), value);
+	now = rand() % 2;
+	//now = gpioRead(37);
+	UA_Variant_setScalar(&value, &now, &UA_TYPES[UA_TYPES_INT64]);
+	UA_Server_writeValue(server, UA_NODEID_STRING(2, "GPIO 37"), value);
+	now = rand() % 2;
+	//now = gpioRead(38);
+	UA_Variant_setScalar(&value, &now, &UA_TYPES[UA_TYPES_INT64]);
+	UA_Server_writeValue(server, UA_NODEID_STRING(2, "GPIO 38"), value);
+	
+	now = rand() % 2;
+	//now = gpioRead(39);
+	UA_Variant_setScalar(&value, &now, &UA_TYPES[UA_TYPES_INT64]);
+	UA_Server_writeValue(server, UA_NODEID_STRING(2, "GPIO 39"), value); 
 }
 
 
@@ -567,6 +602,69 @@ int main(void) {
 	UA_NODEID_NUMERIC(0, UA_NS0ID_HASCOMPONENT),
 	UA_QUALIFIEDNAME(2,"GPIO 31"),UA_NODEID_NUMERIC(0, UA_NS0ID_BASEDATAVARIABLETYPE), Attr31, NULL, NULL);
 
+	UA_VariableAttributes Attr32 = UA_VariableAttributes_default;
+	//UA_Int64 state = gpioRead(pin_number);
+	UA_Int64 state32 = 0;
+	UA_Variant_setScalar(&Attr32.value, &state32, &UA_TYPES[UA_TYPES_INT64]);
+	UA_Server_addVariableNode(server, UA_NODEID_STRING(2,"GPIO 32"), GPIO_Id,
+	UA_NODEID_NUMERIC(0, UA_NS0ID_HASCOMPONENT),
+	UA_QUALIFIEDNAME(2,"GPIO 32"),UA_NODEID_NUMERIC(0, UA_NS0ID_BASEDATAVARIABLETYPE), Attr32, NULL, NULL);
+	
+	UA_VariableAttributes Attr33 = UA_VariableAttributes_default;
+	//UA_Int64 state = gpioRead(pin_number);
+	UA_Int64 state33 = 0;
+	UA_Variant_setScalar(&Attr33.value, &state33, &UA_TYPES[UA_TYPES_INT64]);
+	UA_Server_addVariableNode(server, UA_NODEID_STRING(2,"GPIO 33"), GPIO_Id,
+	UA_NODEID_NUMERIC(0, UA_NS0ID_HASCOMPONENT),
+	UA_QUALIFIEDNAME(2,"GPIO 33"),UA_NODEID_NUMERIC(0, UA_NS0ID_BASEDATAVARIABLETYPE), Attr33, NULL, NULL);
+	
+	UA_VariableAttributes Attr34 = UA_VariableAttributes_default;
+	//UA_Int64 state = gpioRead(pin_number);
+	UA_Int64 state34 = 0;
+	UA_Variant_setScalar(&Attr34.value, &state34, &UA_TYPES[UA_TYPES_INT64]);
+	UA_Server_addVariableNode(server, UA_NODEID_STRING(2,"GPIO 34"), GPIO_Id,
+	UA_NODEID_NUMERIC(0, UA_NS0ID_HASCOMPONENT),
+	UA_QUALIFIEDNAME(2,"GPIO 34"),UA_NODEID_NUMERIC(0, UA_NS0ID_BASEDATAVARIABLETYPE), Attr34, NULL, NULL);
+	
+	UA_VariableAttributes Attr35 = UA_VariableAttributes_default;
+	//UA_Int64 state = gpioRead(pin_number);
+	UA_Int64 state35 = 0;
+	UA_Variant_setScalar(&Attr35.value, &state35, &UA_TYPES[UA_TYPES_INT64]);
+	UA_Server_addVariableNode(server, UA_NODEID_STRING(2,"GPIO 35"), GPIO_Id,
+	UA_NODEID_NUMERIC(0, UA_NS0ID_HASCOMPONENT),
+	UA_QUALIFIEDNAME(2,"GPIO 35"),UA_NODEID_NUMERIC(0, UA_NS0ID_BASEDATAVARIABLETYPE), Attr35, NULL, NULL);
+	
+	UA_VariableAttributes Attr36 = UA_VariableAttributes_default;
+	//UA_Int64 state = gpioRead(pin_number);
+	UA_Int64 state36 = 0;
+	UA_Variant_setScalar(&Attr36.value, &state36, &UA_TYPES[UA_TYPES_INT64]);
+	UA_Server_addVariableNode(server, UA_NODEID_STRING(2,"GPIO 36"), GPIO_Id,
+	UA_NODEID_NUMERIC(0, UA_NS0ID_HASCOMPONENT),
+	UA_QUALIFIEDNAME(2,"GPIO 36"),UA_NODEID_NUMERIC(0, UA_NS0ID_BASEDATAVARIABLETYPE), Attr36, NULL, NULL);
+	
+	UA_VariableAttributes Attr37 = UA_VariableAttributes_default;
+	//UA_Int64 state = gpioRead(pin_number);
+	UA_Int64 state37 = 0;
+	UA_Variant_setScalar(&Attr37.value, &state37, &UA_TYPES[UA_TYPES_INT64]);
+	UA_Server_addVariableNode(server, UA_NODEID_STRING(2,"GPIO 37"), GPIO_Id,
+	UA_NODEID_NUMERIC(0, UA_NS0ID_HASCOMPONENT),
+	UA_QUALIFIEDNAME(2,"GPIO 37"),UA_NODEID_NUMERIC(0, UA_NS0ID_BASEDATAVARIABLETYPE), Attr37, NULL, NULL);
+	
+	UA_VariableAttributes Attr38 = UA_VariableAttributes_default;
+	//UA_Int64 state = gpioRead(pin_number);
+	UA_Int64 state38 = 0;
+	UA_Variant_setScalar(&Attr38.value, &state38, &UA_TYPES[UA_TYPES_INT64]);
+	UA_Server_addVariableNode(server, UA_NODEID_STRING(2,"GPIO 38"), GPIO_Id,
+	UA_NODEID_NUMERIC(0, UA_NS0ID_HASCOMPONENT),
+	UA_QUALIFIEDNAME(2,"GPIO 38"),UA_NODEID_NUMERIC(0, UA_NS0ID_BASEDATAVARIABLETYPE), Attr38, NULL, NULL);
+	
+	UA_VariableAttributes Attr39 = UA_VariableAttributes_default;
+	//UA_Int64 state = gpioRead(pin_number);
+	UA_Int64 state39 = 0;
+	UA_Variant_setScalar(&Attr39.value, &state39, &UA_TYPES[UA_TYPES_INT64]);
+	UA_Server_addVariableNode(server, UA_NODEID_STRING(2,"GPIO 39"), GPIO_Id,
+	UA_NODEID_NUMERIC(0, UA_NS0ID_HASCOMPONENT),
+	UA_QUALIFIEDNAME(2,"GPIO 39"),UA_NODEID_NUMERIC(0, UA_NS0ID_BASEDATAVARIABLETYPE), Attr39, NULL, NULL);
 
 	UA_MethodAttributes highAttr = UA_MethodAttributes_default;
 	highAttr.description = UA_LOCALIZEDTEXT("en-US","Method to set high");
