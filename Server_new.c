@@ -11,7 +11,7 @@ static void stopHandler(int sig) {
 }
 
 
-
+//Reading values of GPIOs
 static void
 beforeRead(UA_Server *server,
                const UA_NodeId *sessionId, void *sessionContext,
@@ -198,7 +198,7 @@ beforeRead(UA_Server *server,
 
 
 
-
+//Method to set high given GPIO
 static UA_StatusCode
 set_high(UA_Server *server,
                          const UA_NodeId *sessionId, void *sessionHandle,
@@ -217,6 +217,7 @@ set_high(UA_Server *server,
 	return UA_STATUSCODE_GOOD;
 }
 
+//Method to set low given GPIO
 static UA_StatusCode
 set_low(UA_Server *server,
                          const UA_NodeId *sessionId, void *sessionHandle,
@@ -236,6 +237,7 @@ set_low(UA_Server *server,
 
 }
 
+//method to set pwm signal in given GPIO
 static UA_StatusCode
 set_pwm(UA_Server *server,
                          const UA_NodeId *sessionId, void *sessionHandle,
